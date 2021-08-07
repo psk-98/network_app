@@ -1,0 +1,23 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.save-btn {
+    color: #f2f2f2;
+    background: #ff6f00;
+    border: none;
+    border-radius: 20px;
+    padding: 3px 10px;
+}
+textarea {
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    border: 2px solid #ced4da;
+    border-radius: 5px;
+    color: #555;
+    padding: 5px 10px;
+    margin: 5px 0;
+}

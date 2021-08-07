@@ -1,0 +1,67 @@
+.post {
+    margin: 0 20px;
+}
+.p-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.p-author {
+    font-weight: bold;
+    font-size: 600;
+    font-size: 17px;
+}
+.ago {
+    font-size: 10px;
+    color: #707070;
+    text-align: right;
+}
+.p-main {
+    width: 100%;
+    font-size: 15px;
+}
+.p-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+}
+.likes, .coms{
+    color: #222;
+    stroke: #707070;
+    fill: none;
+    display: flex;
+    align-items: center;
+    padding: 2px 15px;
+}
+.likes svg {
+    width: 17px;
+    padding: 0 0 0 3px;
+}
+.coms svg {
+    width: 15px;
+    padding: 0 0 0 3px;
+}
+
+@media (min-width: 768px) {
+    .p-author {
+        font-size: 40px;
+    }
+    .ago {
+        font-size: 14px;
+        color: #707070;
+        text-align: right;
+    }
+    .p-main {
+        font-size: 20px;
+    }
+    .p-footer {
+        font-size: 22px;
+    }
+    .likes svg {
+        width: 20px;
+    }
+    .coms svg {
+        width: 18px;
+    }
+}

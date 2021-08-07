@@ -1,0 +1,17 @@
+.dt {
+    color: #707070;
+    font-size: 13px;
+}
+.no_likes, .no_com {
+    font-weight: bold;
+    text-align: center;
+}
+.inter_title {
+    color: #707070;
+    font-weight: normal;
+}
+.t_footer {
+    display: flex;
+    justify-content: left;
+    font-size: 13px;
+}

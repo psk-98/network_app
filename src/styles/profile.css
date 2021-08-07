@@ -1,0 +1,84 @@
+.pro-wrapper .navbar {
+    border: none;
+}
+.profile {
+    display: flex;
+    margin: 0 20px;
+    justify-content: space-between;
+}
+.pro-owner {
+    font-size: 18px;
+    font-weight: bold;
+}
+.pro-wrapper .pbd button {
+    border: solid 1px #707070;
+    background: none;
+    border-radius: 23px;
+    font-size: 9px;
+    padding: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #707070;
+}
+.pro-wrapper .pbd .follow-prof {
+    color: #f2f2f2;
+    background: #ff6f00;
+    border: none;
+}
+.pro-des {
+    margin: 0 20px;
+    font-size: 11px;
+    color: #707070;
+}
+.det-r {
+    margin: 0 20px;
+    display: flex;
+    color: #707070;
+    font-size: 11px;
+}
+.det-icon svg {
+    height: 9px;
+}
+.bold, .det-icon, .detail {
+    padding: 0 5px 0 0;
+}
+.bold {
+    color: black;
+}
+.detail {
+    padding: 0 10px 0 0;
+}
+.navs {
+    display: flex;
+    width: 100%;
+    margin: 10px 0 5px 0;
+}
+.navs div{
+    max-width: 50%;
+    width: 50%;
+    text-align: center;
+    border: #707070 solid 1px;
+}
+.selected {
+    font-weight: bold;
+    color: #ff6f00;
+    border: 1px solid #ff6f00 !important; 
+}
+@media (min-width: 768px) {
+    .pro-owner {
+        font-size: 40px;
+    }
+    .pro-wrapper .pbd button {
+        font-size: 12px;
+    }
+    .pro-des {
+        font-size: 17px;
+    }
+    .det-r {
+        font-size: 14px;
+    }
+    .det-icon svg {
+        height: 11px;
+    }
+}

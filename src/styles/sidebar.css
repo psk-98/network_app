@@ -1,0 +1,92 @@
+#sidebar {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    height: 100vh;
+    z-index: 999;
+    background: #ff6f00;
+    color: #f2f2f2;
+    transition: all .5s ease-in;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, .2);
+}
+#sidebar.active {
+    left: 0;
+}
+#sidebar .sidebar-header #dimiss {
+    width: 20%;
+    height: 100%;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.overlay {
+    display: none;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 998;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+.overlay.active {
+    display: block;
+    opacity: 1;
+    position: absolute;
+    top: 0;
+}
+#sidebar .sidebar-header {
+    padding: 0 0 0 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#sidebar .sidebar-header .ntwrk-hdng{
+    width: 80%;
+    height: 100%;
+}
+#sidebar ul.components {
+    padding: 0 0 20px 0;
+    text-align: center;
+}
+#sidebar ul p{
+    color: #f2f2f2;
+    padding: 10px;
+}
+.side-profile .pro_owner {
+    color: #f2f2f2;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+.side-profile .pro_owner:hover{
+    color: #111;
+}
+#sidebar ul li a ,.li-span, .side-profile {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+    color: #f2f2f2;
+    text-decoration: none;
+}
+#sidebar ul li a:hover {
+    color: #FF6F00;
+    background: #fff;
+}
+.li-span:hover {
+    color: #FF6F00;
+    background: #fff;
+}
+@media (min-width: 768px) {
+    .wrapper {
+        width: 25%;
+        float: left;
+        position: fixed;
+    }
+    #sidebar {
+        left: 0;
+        width: 25%;
+    }
+}

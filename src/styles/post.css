@@ -1,0 +1,36 @@
+.back-btn {
+    background: none;
+    border: none;
+}
+.t-details {
+    font-size: 17px;
+    font-weight: bold;
+}
+.t-main {
+    font-size: 13px;
+    padding: 0 0 5px 0;
+}
+.dt, .t-footer {
+    font-size: 9px;
+    color: #707070;
+}
+.t-footer {
+    display: flex;
+}
+.no_likes {
+    padding: 0 5px 0 0;
+}
+.post svg {
+    width: 13px;
+}
+@media (min-width: 768px) {
+    .t-details {
+        font-size: 40px
+    }
+    .t-main {
+        font-size: 20px
+    }
+    .dt, .t-footer {
+        font-size: 13px;
+    }
+}

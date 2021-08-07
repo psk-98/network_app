@@ -1,0 +1,31 @@
+.follows_row {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 20px;
+}
+.follows_user {
+    font-weight: bold;
+}
+.follows_btn button {
+    color: #f2f2f2;
+    background: #ff6f00;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+input ,textarea {
+    width: 90%;
+    max-width: 100%;
+    border: 2px solid #ced4da;
+    border-radius: 5px;
+    color: #555;
+    padding: 5px 10px;
+    margin: 5px 0;
+}
+.editpro-wrapper {
+    margin: 5px 20px;
+}
+.editpro-wrapper div{
+    display: flex;
+    flex-direction: column;
+}

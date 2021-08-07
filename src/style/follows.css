@@ -1,0 +1,27 @@
+.follows_row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: #ced4da solid 1px;
+    padding: 10px 30px;
+    width: 100%;
+}
+.follows_user {
+    font-weight: bold;
+    width: 50%;
+    text-align: left;
+}
+.follows_user a {
+    color: inherit;
+}
+.follows_btn {
+    width: 50%;
+    text-align: right;
+}
+.follows_btn button {
+    color: #f2f2f2;
+    background: #ff6f00;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 10px;
+}

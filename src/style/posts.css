@@ -1,0 +1,42 @@
+nav {
+    border-bottom: 1px solid #ced4da;
+}
+.p_main_top {
+    display: flex;
+    justify-content: space-between;
+}
+.p_author {
+    width: 60%;
+    font-weight: bold;
+    font-size: 17px;
+}
+.p_author a {
+    color: inherit;
+}
+.ago {
+    width: 40%;
+    text-align: right;
+}
+.p_content {
+    color: inherit;
+    width: 100%;
+}
+.p_footer {
+    display: flex;
+    justify-content: center;
+}
+.footer-item {
+    padding: 0 5px;
+}
+.footer-item span {
+    padding: 0 2px;
+}
+.footer-item svg {
+    stroke: #000;
+    fill: none;
+}
+svg.liked {
+    fill: red;
+    stroke: red;
+}
+
