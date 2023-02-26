@@ -1,4 +1,4 @@
-## Social media app 
+# Social media app 
 
 Users can upload, like and view posts from other users
 
