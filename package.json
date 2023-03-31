@@ -1,0 +1,33 @@
+{
+  "name": "network-next-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "prepare": "husky install",
+    "pre-commit": "git add -A ."
+  },
+  "dependencies": {
+    "@next/font": "^13.2.4",
+    "@reduxjs/toolkit": "^1.9.3",
+    "axios": "^1.3.4",
+    "cypress": "^12.9.0",
+    "dayjs": "^1.11.7",
+    "eslint": "8.36.0",
+    "eslint-config-next": "13.2.4",
+    "framer-motion": "^10.3.0",
+    "next": "13.2.4",
+    "next-redux-wrapper": "^8.1.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-hook-form": "^7.43.5",
+    "react-redux": "^8.0.5",
+    "redux": "^4.2.1"
+  },
+  "devDependencies": {
+    "husky": "^8.0.3"
+  }
+}

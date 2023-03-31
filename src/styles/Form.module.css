@@ -1,0 +1,62 @@
+.header {
+  font-size: 4rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 4rem 0 4rem 0;
+}
+.form {
+  width: 100%;
+  max-width: 100%;
+}
+.input {
+  text-align: right;
+}
+.inputGroup div,
+.btnGroup {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+  max-width: 100%;
+  border-radius: 20px;
+  background: rgba(137, 138, 131, 0.05);
+}
+.passwordVis {
+  padding: 0 3% 0 0;
+}
+.passwordVis svg {
+  width: 20px;
+}
+.inputGroup input {
+  border: none;
+  text-transform: none;
+  width: 90%;
+  height: 7rem;
+  padding: 0 5%;
+  background: none;
+}
+.alert {
+  color: red;
+  padding: 0 5%;
+}
+.btnGroup {
+  padding: 0 5%;
+  height: 7rem;
+  justify-content: space-between;
+  background: #ff6f00;
+  margin: 3rem 0 2rem 0;
+}
+.btnGroup svg {
+  width: 20px;
+}
+.btnGroup input {
+  background: none;
+  border: none;
+  text-transform: capitalize;
+}
+.formLinks {
+  text-align: center;
+}
+.formLinks a {
+  color: #ff6f00;
+  font-weight: 700;
+}

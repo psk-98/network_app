@@ -1,0 +1,32 @@
+.notificationA {
+  background: rgba(255, 111, 0, 0.25);
+}
+.notification,
+.notificationA {
+  border-bottom: 1px solid #e7e8e6;
+  padding: 2rem 3rem;
+  display: flex;
+  align-items: center;
+}
+
+.notification a:first-child,
+.notificationA a:first-child {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.profileWrapper img {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  margin: 0 2rem 0 0;
+  z-index: 1;
+}
+.profileWrapper a {
+  font-weight: 700;
+  margin: 0 0.5rem 0 0;
+}
+.notificationsWrapper span {
+  font-size: 1.25rem;
+  color: #a0a0a0;
+}

@@ -1,0 +1,59 @@
+.bottomWrapper,
+.nav {
+  position: fixed;
+  width: 100%;
+  max-width: 500px;
+  background: #fff;
+  height: 8vh;
+  display: flex;
+  align-items: center;
+  z-index: 3;
+}
+.nav {
+  top: 0;
+  justify-content: space-between;
+}
+.nav div {
+  margin: 0 3rem;
+}
+.nav svg {
+  height: 2rem;
+  fill: #ff6f00;
+}
+.nav div:first-child svg {
+  fill: #050505;
+}
+.logo {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ff6f00;
+}
+.notifications {
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  font-size: 3rem;
+}
+.bottomWrapper {
+  bottom: 0;
+  border: #e7e8e6 1px solid;
+  border-radius: 1rem 1rem 0 0;
+}
+.bottom {
+  margin: 0 3rem;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-content: center;
+}
+.bottom svg {
+  height: 20px;
+  fill: #050505;
+}
+.avatar {
+  width: 3rem;
+  height: 3rem;
+}
+.avatar img {
+  border-radius: 50%;
+}

@@ -1,0 +1,104 @@
+.post {
+  padding: 2rem 0;
+  box-shadow: #e7e8e6 1px 1px 1px;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+.postHeader {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 1rem 0;
+  align-items: center;
+}
+.postAuthorImg {
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  margin: 0 1.5rem 0 0;
+}
+.postAuthorImg img {
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  filter: blur(0.6px);
+}
+.postAuthor a {
+  display: flex;
+  font-weight: 400;
+  align-items: center;
+}
+.postOptions {
+  font-size: 1.25rem;
+  color: #a0a0a0;
+}
+.postContent {
+  width: 100%;
+  max-width: 100%;
+}
+.mediaWrapper {
+  aspect-ratio: 9/5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.mediaWrapper a,
+.postContent a {
+  width: 100%;
+}
+.mediaWrapper img {
+  object-fit: fill;
+  margin: 1rem 0 0 0;
+  border-radius: 0.5rem;
+}
+.mediaControls svg {
+  fill: #050505;
+  height: 3rem;
+}
+.mediaControls div {
+  padding: 1.5rem;
+  cursor: pointer;
+}
+.mediaNext {
+  display: flex;
+  justify-content: flex-end;
+  transform: rotate(180deg);
+}
+.mediaControls {
+  position: absolute;
+  left: 0;
+  right: 0;
+  max-width: 500px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.postCreated {
+  margin: 0.5rem 0 0 0;
+}
+.postCreated span {
+  font-size: 1.5rem;
+}
+.day {
+  margin: 0 0 0 1rem;
+}
+.postFooter {
+  display: flex;
+  margin: 1.5rem 0 0 0;
+}
+.postFooter div:first-child {
+  margin: 0 3rem 0 0;
+}
+.likes,
+.coms {
+  color: #050505;
+  display: flex;
+  font-size: 1.75rem;
+  align-items: flex-end;
+}
+.likes svg,
+.coms svg {
+  stroke: none;
+  fill: #050505;
+  height: 2.25rem;
+  padding: 0 0 0 0.25rem;
+}

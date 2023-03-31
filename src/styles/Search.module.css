@@ -1,0 +1,33 @@
+.header {
+  position: absolute;
+  height: 12vh;
+  top: 1rem;
+  z-index: 4;
+  width: 100%;
+  max-width: 500px;
+  background: #fff;
+}
+.header input {
+  width: 100%;
+  max-width: 452px;
+  padding: 1rem 3rem;
+  outline: none;
+  background: #f9f9f9;
+  border: none;
+}
+.navBtns {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 3rem;
+  margin: 2rem 0 0 0;
+}
+.active {
+  border-bottom: #ff6f00 solid 2px;
+}
+.navBtn {
+  width: 50%;
+  text-align: center;
+}
+.content {
+  margin: 5vh 0 0 0;
+}

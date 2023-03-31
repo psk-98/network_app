@@ -1,0 +1,209 @@
+.profileHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.profileAvatar {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+}
+.profileAvatar img {
+  border-radius: 50%;
+}
+.profileOwner {
+  font-weight: bold;
+  text-align: center;
+}
+.profileActions {
+  display: flex;
+  align-items: center;
+}
+.messageBtn {
+  height: fit-content;
+  width: fit-content;
+}
+.messageBtn svg {
+  height: 2rem;
+  margin: 0 3rem 0 0;
+  fill: #ff6f00;
+}
+.edit,
+.followBtn {
+  border: solid 1px #050505;
+  border-radius: 20px;
+  padding: 0.5rem 1.5rem;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.followBtn {
+  border: none;
+  background: #ff6f00;
+  color: #eee;
+}
+.profileContent {
+  margin: 1rem 0;
+}
+.bio {
+  font-size: 1.5rem;
+}
+.details {
+  display: flex;
+  margin: 1rem 0;
+  cursor: pointer;
+}
+.details div:first-child {
+  margin: 0 4rem 0 0;
+}
+.detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.detText {
+  font-size: 1.25rem;
+}
+.profileFooter {
+  display: flex;
+  max-width: 100%;
+}
+.profileFooter .active {
+  border-bottom: #ff6f00 solid 2px;
+}
+.profileFooter div {
+  width: 50%;
+  text-align: center;
+  z-index: 2;
+  cursor: pointer;
+}
+.profileFooter div {
+  background: none;
+  padding: 0.5rem 0;
+}
+
+.profileFooter div:first-child span {
+  opacity: 0;
+}
+.empty {
+  margin: 2rem 0 0 0;
+  text-align: center;
+}
+/* Follows */
+.wrapper {
+  position: fixed;
+  background: #fff;
+  width: 100%;
+  max-width: 100%;
+  height: 100vh;
+  z-index: 5;
+  top: 0;
+}
+.followsHeader {
+  margin: 2rem 0;
+}
+
+.navBtns {
+  display: flex;
+}
+.navBtns .active {
+  background-color: #ff6f00;
+}
+.navBtn {
+  margin: 2rem 0 0 0;
+  width: 50%;
+  text-align: center;
+  padding: 1rem 0;
+}
+.userWrapper {
+  border-bottom: 1px solid #e7e8e6;
+  padding: 2rem 3rem;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  justify-content: space-between;
+}
+.userWrapper .profile {
+  display: flex;
+  align-items: center;
+}
+.userWrapper .profileAvatar {
+  margin: 0 2rem 0 0;
+}
+.userWrapper .userDetails {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 100%;
+  font-weight: 700;
+}
+.userWrapper .bio {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 70%;
+}
+
+/* edit  */
+.editWrapper {
+  position: absolute;
+  background: #fff;
+  width: 100%;
+  max-width: 500px;
+  height: 100vh;
+  z-index: 4;
+  top: 0;
+}
+.editHeader {
+  margin: 3rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+.editHeader svg {
+  height: 2rem;
+  fill: #050505;
+}
+.editGroup:first-child {
+  background: none;
+}
+.editGroup {
+  margin: 0 0 3rem 0;
+  max-width: 100%;
+  border-radius: 20px;
+  background: rgba(137, 138, 131, 0.05);
+}
+.editGroup input,
+.editGroup textarea {
+  width: 90%;
+  padding: 0 5%;
+  border: none;
+  outline: none;
+  background: none;
+  height: 7rem;
+}
+.editGroup textarea {
+  padding: 2rem 5%;
+  resize: none;
+  height: 10rem;
+}
+
+.fileInput {
+  display: inline-block;
+  position: absolute;
+  overflow: hidden;
+  left: 3rem;
+}
+.fileInput input[type="file"] {
+  opacity: 0;
+  font-size: 4rem;
+  width: 8rem;
+}
+.fileInput svg {
+  position: absolute;
+  height: 3rem;
+  fill: #ff6f00;
+  left: 1.5rem;
+  top: 1rem;
+}

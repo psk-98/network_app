@@ -1,0 +1,64 @@
+.formWrapper {
+  height: 100vh;
+  width: 100%;
+  max-width: 500px;
+  position: fixed;
+  top: 0;
+  background: #fff;
+  z-index: 4;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4rem 0 2.5rem 0;
+}
+.header div:nth-child(2) {
+  background: #ff6f00;
+  border-radius: 20px;
+  color: #eee;
+  padding: 0.25rem 2rem;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.textInput textarea {
+  width: 100%;
+  max-width: 100%;
+  border: none;
+  height: 40vh;
+  outline: none;
+  resize: none;
+}
+.fileInput {
+  display: inline-block;
+  position: absolute;
+  overflow: hidden;
+  bottom: 10vh;
+  right: 3rem;
+}
+.fileInput input[type="file"] {
+  left: 0;
+  top: 0;
+  opacity: 0;
+  position: absolute;
+  font-size: 90px;
+}
+.fileInput svg {
+  height: 3rem;
+  fill: #ff6f00;
+}
+.filePreview {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.filePreview div {
+  margin: 0.2rem;
+  width: 40%;
+  height: auto;
+  object-fit: cover;
+}
