@@ -85,7 +85,7 @@ export default function Login({ prevRoute }) {
             {continueIcon}
           </div>
           <div className={styles.formLinks}>
-            Don't have an account?{" "}
+            {"Don't have an account?"}
             <Link href="/register">Create an account.</Link>
           </div>
         </form>

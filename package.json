@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "prepare": "husky install",
-    "pre-commit": "git add -A ."
+    "pre-commit": "npm run lint --fix && git add -A ."
   },
   "dependencies": {
     "@next/font": "^13.2.4",
