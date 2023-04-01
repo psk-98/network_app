@@ -25,7 +25,7 @@ export default function Login({ prevRoute }) {
   }, [isAuthenticated, router])
 
   return (
-    <PageWrapper>
+    <PageWrapper title={"Network | Login"}>
       <div className="contained">
         <div className={styles.header}>Welcome back</div>
         <form

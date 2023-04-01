@@ -31,3 +31,7 @@
 .content {
   margin: 5vh 0 0 0;
 }
+.empty {
+  text-align: center;
+  width: 100%;
+}

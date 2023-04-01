@@ -11,50 +11,54 @@ export default function UserList({ profiles }) {
 
   return (
     <div className={styles.usersWrapper}>
-      {profiles.map((profile) => {
-        return (
-          <Link
-            href={`/profile/${profile?.id}`}
-            className={styles.userWrapper}
-            key={profile.id}
-          >
-            <div className={styles.profile}>
-              <div className={styles.profileAvatar}>
-                <Image
-                  src={profile?.profile?.get_avatar.replace(/\s+/, "")}
-                  width={100}
-                  height={100}
-                  alt="profile picture"
-                />
+      {profiles.length > 0 ? (
+        profiles.map((profile) => {
+          return (
+            <Link
+              href={`/profile/${profile?.id}`}
+              className={styles.userWrapper}
+              key={profile.id}
+            >
+              <div className={styles.profile}>
+                <div className={styles.profileAvatar}>
+                  <Image
+                    src={profile?.profile?.get_avatar.replace(/\s+/, "")}
+                    width={100}
+                    height={100}
+                    alt="profile picture"
+                  />
+                </div>
+                <div>{profile?.username}</div>
               </div>
-              <div>{profile?.username}</div>
-            </div>
-            {user?.following.some((user_obj) => {
-              return user_obj.following.id === profile.id
-            }) ? (
-              <div
-                className={styles.followBtn}
-                onClick={() => {
-                  dispatch(unfollowUser(profile.id))
-                }}
-              >
-                Unfollow
-              </div>
-            ) : (
-              <div
-                className={styles.followBtn}
-                onClick={() => {
-                  isAuthenticated
-                    ? dispatch(followUser(profile.id))
-                    : router.push("/login")
-                }}
-              >
-                Follow
-              </div>
-            )}
-          </Link>
-        )
-      })}
+              {user?.following.some((user_obj) => {
+                return user_obj.following.id === profile.id
+              }) ? (
+                <div
+                  className={styles.followBtn}
+                  onClick={() => {
+                    dispatch(unfollowUser(profile.id))
+                  }}
+                >
+                  Unfollow
+                </div>
+              ) : (
+                <div
+                  className={styles.followBtn}
+                  onClick={() => {
+                    isAuthenticated
+                      ? dispatch(followUser(profile.id))
+                      : router.push("/login")
+                  }}
+                >
+                  Follow
+                </div>
+              )}
+            </Link>
+          )
+        })
+      ) : (
+        <div className="contained">{"User doesn't exist"}</div>
+      )}
     </div>
   )
 }

@@ -1,6 +1,5 @@
 import { getPost } from "@/actions/posts"
 import CreateModal from "@/components/common/create"
-import Loader from "@/components/layout/loader"
 import PageWrapper from "@/components/layout/PageWrapper"
 import Like from "@/components/posts/like"
 import PostMedia from "@/components/posts/postMedia"
@@ -17,7 +16,7 @@ import { useDispatch, useSelector } from "react-redux"
 export default function Post() {
   const [isCreate, setCreate] = useState(false)
   const state = useSelector((state) => state)
-  const { post, loading } = state.posts
+  const { post } = state.posts
   const router = useRouter()
   const dispatch = useDispatch()
 
@@ -27,15 +26,8 @@ export default function Post() {
     dispatch(getPost(slug))
   }, [slug])
 
-  return loading ? (
-    <Loader loading={loading} />
-  ) : (
-    <PageWrapper
-      key={loading}
-      title="Home"
-      path={router.asPath}
-      desc="This is the home page of FootPrints a mock online store"
-    >
+  return (
+    <PageWrapper title={"Network | Post"}>
       {isCreate && (
         <CreateModal setCreate={setCreate} isComment={true} postId={post?.id} />
       )}

@@ -184,6 +184,21 @@ export const getFollowers = createAsyncThunk(
   }
 )
 
+export const isUsed = createAsyncThunk(
+  "IS_USED",
+  async (params, { rejectWithValue }) => {
+    try {
+      const res = await axios.get(`${BASE_URL}/auth/is_used`, {
+        params: params,
+      })
+      return res.data
+    } catch (err) {
+      console.error(err)
+      return rejectWithValue(err)
+    }
+  }
+)
+
 export const tokenConfig = () => {
   const token = localStorage.getItem("token")
 

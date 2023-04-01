@@ -1,6 +1,5 @@
 import { followUser, getProfile, unfollowUser } from "@/actions/accounts"
 import { getUserPosts } from "@/actions/posts"
-import Loader from "@/components/layout/loader"
 import PageWrapper from "@/components/layout/PageWrapper"
 import Posts from "@/components/posts/posts"
 import Edit from "@/components/profile/edit"
@@ -18,7 +17,7 @@ export default function Profile() {
 
   const state = useSelector((state) => state)
 
-  const { profile, loading, user, isAuthenticated } = state.accounts
+  const { profile, user, isAuthenticated } = state.accounts
   const { userPosts } = state.posts
 
   const router = useRouter()
@@ -34,11 +33,9 @@ export default function Profile() {
     if (slug) dispatch(getProfile(slug))
   }, [slug, dispatch])
 
-  return loading ? (
-    <Loader loading={loading} />
-  ) : (
+  return (
     profile && (
-      <PageWrapper>
+      <PageWrapper title={`Network | ${profile?.username}`}>
         {isEdit && <Edit user={user} setEdit={setEdit} />}
         {isFollows && <Follows setFollows={setFollows} />}
         <div className={styles.profileWrapper}>

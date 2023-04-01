@@ -1,7 +1,6 @@
 import { getThread } from "@/actions/accounts"
 import { sendMessage } from "@/actions/threads"
 import { PrivateRoute } from "@/components/common/privateRoutes"
-import Loader from "@/components/layout/loader"
 import PageWrapper from "@/components/layout/PageWrapper"
 import { whichUser } from "@/components/messages/helpers"
 import { timePast } from "@/components/posts/helpers"
@@ -17,7 +16,7 @@ export default function Thread() {
   const [message, setMessage] = useState()
   const [media, setMedia] = useState()
 
-  const { thread, loading, user } = useSelector((state) => state.accounts)
+  const { thread, user } = useSelector((state) => state.accounts)
   const dispatch = useDispatch()
 
   const router = useRouter()
@@ -41,16 +40,9 @@ export default function Thread() {
     dispatch(sendMessage(formData))
   }
 
-  return loading ? (
-    <Loader loading={loading} />
-  ) : (
+  return (
     <PrivateRoute>
-      <PageWrapper
-        key={loading}
-        title="Home"
-        path={router.asPath}
-        desc="This is the home page of FootPrints a mock online store"
-      >
+      <PageWrapper>
         <div className={styles.threadHeader}>
           <Link
             href={`/profile/${whichUser(user, thread)?.id}`}

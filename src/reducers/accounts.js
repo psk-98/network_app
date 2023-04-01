@@ -4,6 +4,7 @@ import {
   getProfile,
   getThread,
   getThreads,
+  isUsed,
   loadUser,
   login,
 } from "../actions/accounts"
@@ -11,7 +12,15 @@ import {
 export const accountsSlice = createSlice({
   name: "accounts",
   initialState: {},
+  reducers: {
+    clearIsUsed: (state) => {
+      state.isUsedData = {}
+    },
+  },
   extraReducers: (builder) => {
+    builder.addCase(isUsed.fulfilled, (state, action) => {
+      state.isUsedData = { ...state.isUsedData, ...action.payload }
+    })
     builder.addCase(getThreads.pending, (state) => {
       state.loading = true
     })
@@ -86,3 +95,5 @@ export const accountsSlice = createSlice({
     })
   },
 })
+
+export const { clearIsUsed } = accountsSlice.actions

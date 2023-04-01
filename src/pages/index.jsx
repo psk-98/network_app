@@ -20,7 +20,7 @@ export default function Home() {
 
   return (
     <PrivateRoute>
-      <PageWrapper>
+      <PageWrapper title={"Network | Feed"}>
         {isCreate && <CreateModal setCreate={setCreate} isComment={false} />}
         <Nav setCreate={setCreate} />
         <Posts posts={posts} notComments={true} />

@@ -25,7 +25,7 @@ export default function Search() {
 
   return (
     <PrivateRoute>
-      <PageWrapper>
+      <PageWrapper title={"Network | Explore"}>
         <div className={styles.wrapper}>
           <div className={styles.header}>
             <input
@@ -56,6 +56,12 @@ export default function Search() {
               : state.search?.results?.length > 0 && (
                   <UserList profiles={state.search?.results} />
                 )}
+            {state.search?.results?.length === 0 && isPost && (
+              <div className={styles.empty}>No results</div>
+            )}
+            {state.search?.results?.length === 0 && !isPost && (
+              <div className={styles.empty}>{"User doesn't exist"}</div>
+            )}
           </div>
         </div>
       </PageWrapper>

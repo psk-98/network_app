@@ -26,6 +26,10 @@
 .passwordVis svg {
   width: 20px;
 }
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+}
 .inputGroup input {
   border: none;
   text-transform: none;
@@ -34,9 +38,15 @@
   padding: 0 5%;
   background: none;
 }
+
 .alert {
   color: red;
   padding: 0 5%;
+  width: fit-content;
+}
+.alert a {
+  color: red;
+  text-decoration: underline;
 }
 .btnGroup {
   padding: 0 5%;
