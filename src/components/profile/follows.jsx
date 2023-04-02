@@ -4,6 +4,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
+import { prevIcon } from "../../../public/svgs"
 
 export default function Follows({ setFollows }) {
   const [isFollowersNav, setFollowersNav] = useState(false)
@@ -25,7 +26,12 @@ export default function Follows({ setFollows }) {
   return (
     <div className={styles.wrapper}>
       <div className={styles.followsHeader}>
-        <div onClick={() => setFollows(false)}>Cancel</div>
+        <div
+          onClick={() => setFollows(false)}
+          className={styles.followsPrevBtn}
+        >
+          {prevIcon}
+        </div>
         <div className={styles.navBtns}>
           <div
             className={`${styles.navBtn} ${

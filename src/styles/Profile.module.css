@@ -96,7 +96,7 @@
   position: fixed;
   background: #fff;
   width: 100%;
-  max-width: 100%;
+  max-width: 500px;
   height: 100vh;
   z-index: 5;
   top: 0;
@@ -104,12 +104,14 @@
 .followsHeader {
   margin: 2rem 0;
 }
-
+.followsPrevBtn {
+  margin: 0 3rem;
+}
 .navBtns {
   display: flex;
 }
 .navBtns .active {
-  background-color: #ff6f00;
+  border-bottom: #ff6f00 2px solid;
 }
 .navBtn {
   margin: 2rem 0 0 0;
@@ -161,7 +163,8 @@
   display: flex;
   justify-content: space-between;
 }
-.editHeader svg {
+.editHeader svg,
+.followsHeader svg {
   height: 2rem;
   fill: #050505;
 }
