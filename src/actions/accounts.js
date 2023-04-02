@@ -44,14 +44,12 @@ export const logout = createAsyncThunk(
   }
 )
 
-export const register = createAsyncThunk(
+export const registerUser = createAsyncThunk(
   REGISTER,
-  async ({ name, surname, email, password }, { rejectWithValue }) => {
+  async ({ username, email, password }, { rejectWithValue }) => {
     try {
       const body = {
-        first_name: name,
-        last_name: surname,
-        username: `${email}`,
+        username,
         email,
         password,
       }

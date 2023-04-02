@@ -7,6 +7,7 @@ import {
   isUsed,
   loadUser,
   login,
+  registerUser,
 } from "../actions/accounts"
 
 export const accountsSlice = createSlice({
@@ -84,6 +85,20 @@ export const accountsSlice = createSlice({
       state.isAuthenticated = true
     })
     builder.addCase(login.rejected, (state) => {
+      state.loading = false
+      state.isAuthenticated = false
+      state.user = null
+      state.error = "Invalid credentials"
+    })
+
+    builder.addCase(registerUser.pending, (state) => {
+      state.loading = true
+    })
+    builder.addCase(registerUser.fulfilled, (state) => {
+      state.loading = false
+      state.isAuthenticated = true
+    })
+    builder.addCase(registerUser.rejected, (state) => {
       state.loading = false
       state.isAuthenticated = false
       state.user = null

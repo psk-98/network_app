@@ -1,4 +1,4 @@
-import { isUsed, login } from "@/actions/accounts"
+import { isUsed, registerUser } from "@/actions/accounts"
 import PageWrapper from "@/components/layout/PageWrapper"
 import { clearIsUsed } from "@/reducers/accounts"
 import styles from "@/styles/Form.module.css"
@@ -59,8 +59,7 @@ export default function Register() {
         <form
           className={styles.form}
           onSubmit={handleSubmit((data) => {
-            const { username, password } = data
-            dispatch(login({ username, password }))
+            c
           })}
         >
           <div className={styles.inputGroup}>
@@ -196,8 +195,8 @@ export default function Register() {
           <div
             className={styles.btnGroup}
             onClick={handleSubmit((data) => {
-              const { username, password } = data
-              dispatch(login({ username, password }))
+              const { username, email, password } = data
+              dispatch(registerUser({ username, email, password }))
             })}
           >
             <input
