@@ -9,14 +9,14 @@ export default function Follows({ setFollows }) {
   const [isFollowersNav, setFollowersNav] = useState(false)
 
   const dispatch = useDispatch()
-  const { user, isAuthenticated, followers } = useSelector(
+  const { user, isAuthenticated, followers, profile } = useSelector(
     (state) => state.accounts
   )
 
   useEffect(() => {
     dispatch(
       getFollowers({
-        user_id: accounts?.profile?.id,
+        user_id: profile?.id,
         isFollowers: isFollowersNav ? 1 : 0,
       })
     )

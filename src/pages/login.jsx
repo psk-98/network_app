@@ -12,7 +12,7 @@ export default function Login({ prevRoute }) {
   const router = useRouter()
   const dispatch = useDispatch()
   const [isShow, setShow] = useState(false)
-  const { isAuthenticated } = useSelector((state) => state.accounts)
+  const { isAuthenticated, error } = useSelector((state) => state.accounts)
 
   const {
     register,
@@ -72,6 +72,7 @@ export default function Login({ prevRoute }) {
             {errors?.password && (
               <span className={styles.alert}>Password is required</span>
             )}
+            {error && <span className={styles.alert}>{error}</span>}
           </div>
 
           <div

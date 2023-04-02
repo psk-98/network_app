@@ -35,8 +35,6 @@ export const accountsSlice = createSlice({
     //   state.loading = true
     // })
     builder.addCase(getFollowers.fulfilled, (state, action) => {
-      console.log(action.payload)
-
       state.loading = false
       state.followers = action.payload
     })
@@ -57,8 +55,6 @@ export const accountsSlice = createSlice({
       state.loading = true
     })
     builder.addCase(getProfile.fulfilled, (state, action) => {
-      console.log(action.payload)
-
       state.loading = false
       state.profile = action.payload
     })
@@ -77,7 +73,7 @@ export const accountsSlice = createSlice({
       state.loading = false
       state.isAuthenticated = false
       state.user = null
-      state.error = "Invalid creditionals"
+      state.error = "Invalid credentials"
     })
     builder.addCase(login.pending, (state) => {
       state.loading = true
@@ -91,7 +87,7 @@ export const accountsSlice = createSlice({
       state.loading = false
       state.isAuthenticated = false
       state.user = null
-      state.error = "Invalid creditionals"
+      state.error = "Invalid credentials"
     })
   },
 })

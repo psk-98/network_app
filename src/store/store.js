@@ -14,7 +14,10 @@ const masterReducer = (state, action) => {
 }
 
 export const store = () => {
-  return configureStore({ reducer: masterReducer })
+  return configureStore({
+    reducer: masterReducer,
+    devTools: process.env.NODE_ENV === "production" ? false : true,
+  })
 }
 
 export const wrapper = createWrapper(store)

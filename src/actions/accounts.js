@@ -144,7 +144,7 @@ export const followUser = createAsyncThunk(
         tokenConfig()
       )
       dispatch(loadUser())
-      return res
+      return res.data
     } catch (err) {
       console.error(err)
       return rejectWithValue(err)
@@ -161,7 +161,7 @@ export const unfollowUser = createAsyncThunk(
         tokenConfig()
       )
       dispatch(loadUser())
-      return res
+      return res.data
     } catch (err) {
       console.error(err)
       return rejectWithValue(err)
@@ -176,7 +176,7 @@ export const getFollowers = createAsyncThunk(
       const res = await axios.get(`${BASE_URL}/follow/${user_id}`, {
         params: { isFollowers },
       })
-      return res
+      return res.data
     } catch (err) {
       console.error(err)
       return rejectWithValue(err)
